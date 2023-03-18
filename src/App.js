@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h2 className='mt'>Simple Tooltip project</h2>
+    <div className="box">
+      
+      {/* left tooltip */}
+      <div style={{paddingBottom:'20px'}}>
+        <Tippy placement='left' content={<span style={{color:'#fff'}}>I am left tooltip</span>}>
+        <button>Hover left</button>
+        </Tippy>
+      </div>
+
+      {/* right tooltip */}
+      <div style={{paddingBottom:'20px'}}>
+        <Tippy placement='right' content={<span style={{color:'#fff'}}>I am right tooltip</span>}>
+        <button>Hover right</button>
+        </Tippy>
+      </div>
+      
+      {/* bottom tooltip */}
+      <div style={{paddingBottom:'20px'}}>
+        <Tippy placement='bottom' content={<span style={{color:'#fff'}}>I am bottom tooltip</span>}>
+        <button>Hover bottom</button>
+        </Tippy>
+      </div>
+      
+      {/* top tooltp */}
+      <div style={{paddingBottom:'20px'}}>
+        <Tippy placement='top' content={<span style={{color:'#fff'}}>I am top tooltip</span>}>
+        <button>Hover top</button>
+        </Tippy>
+      </div>
     </div>
+    </>
   );
 }
 
